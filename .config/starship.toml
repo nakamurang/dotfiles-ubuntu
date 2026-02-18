@@ -1,0 +1,23 @@
+# No mostrar una línea nueva al inicio
+add_newline = false
+
+# Personalizar el símbolo del prompt
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+# Mostrar el uso de memoria si superas el 75%
+[memory_usage]
+disabled = false
+threshold = 75
+style = "bold dimmed white"
+format = "mem: $symbol[$ram( $swap)]($style) "
+
+# Configuración de Git (para que se vea limpio)
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[directory]
+truncation_length = 3
+fish_style_pwd_dir_length = 1
