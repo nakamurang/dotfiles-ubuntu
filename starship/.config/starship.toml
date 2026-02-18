@@ -1,23 +1,20 @@
-# No mostrar una línea nueva al inicio
-add_newline = false
-
-# Personalizar el símbolo del prompt
-[character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[➜](bold red)"
-
-# Mostrar el uso de memoria si superas el 75%
-[memory_usage]
-disabled = false
-threshold = 75
-style = "bold dimmed white"
-format = "mem: $symbol[$ram( $swap)]($style) "
-
-# Configuración de Git (para que se vea limpio)
-[git_branch]
-symbol = " "
-style = "bold purple"
+# Single-line minimalist prompt
+format = """$directory$git_branch$git_status$character"""
 
 [directory]
+style = "bold cyan"
 truncation_length = 3
-fish_style_pwd_dir_length = 1
+truncation_symbol = "…/"
+
+[character]
+success_symbol = "[󰄾](bold green) " 
+error_symbol = "[󰄾](bold red) "
+
+[git_branch]
+symbol = " "
+format = "on [$symbol$branch]($style) "
+style = "bold purple"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "bold red"
