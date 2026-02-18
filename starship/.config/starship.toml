@@ -1,10 +1,16 @@
+# --- General Config ---
+add_newline = true
+
 # Single-line minimalist prompt
-format = """$directory$git_branch$git_status$character"""
+format = """
+$directory$git_branch$git_status$cmd_duration
+$character"""
 
 [directory]
 style = "bold white"
 truncation_length = 3
 truncation_symbol = "…/"
+read_only = " 󰌾"
 
 [character]
 success_symbol = "[󰄾](bold white) " 
@@ -18,3 +24,24 @@ style = "#F1502F"
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
 style = "bold red"
+
+# --- Módulo de Tiempo ---
+# Te dice cuánto tardó el último comando si fue > 1s
+[cmd_duration]
+min_time = 1_000 # milisegundos
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+# --- Módulo de Memoria ---
+[memory_usage]
+disabled = false
+threshold = 85
+style = "bold dimmed white"
+format = "mem [$ram]($style) "
+
+# --- Sudo detection ---
+[sudo]
+disabled = false
+symbol = "󰀶 "
+format = "[$symbol]($style)"
+style = "bold italic yellow"
