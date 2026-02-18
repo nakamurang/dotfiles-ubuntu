@@ -6,3 +6,5 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias ll='ls -alF'
 alias update='sudo apt update && sudo apt upgrade -y'
 source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+fastfetch
