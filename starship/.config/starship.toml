@@ -7,7 +7,7 @@ $directory$git_branch$git_status$cmd_duration
 $character"""
 
 [directory]
-style = "bold white"
+style = "bold green"
 truncation_length = 3
 truncation_symbol = "…/"
 read_only = " 󰌾"
@@ -30,7 +30,7 @@ style = "bold red"
 [cmd_duration]
 min_time = 1_000 # milisegundos
 format = "took [$duration]($style) "
-style = "bold yellow"
+style = "bold white"
 
 # --- Módulo de Memoria ---
 [memory_usage]
